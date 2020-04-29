@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>Animation Exploration</h1>
+
     <section>
         <h2>Progress Bar using CSS Animation</h2>
         <div id="wrapper"><div></div></div>
@@ -14,7 +15,10 @@
         <h2>Progress Circle Animation using CSS </h2>
         <div style="position:relative;height:120px;">
         <!-- Add the jsfiddle HTML code here -->
-        
+        <div class="wrapper" data-anim="base wrapper">
+            <div class="circle" data-anim="base left"></div>
+            <div class="circle" data-anim="base right"></div>
+        </div>
             
         </div>
         <address><a href="http://jsfiddle.net/RrAVS/">example</a> by <a href="https://stackoverflow.com/users/266068/panos-kal">Panos Kal.</a></address>
@@ -23,8 +27,15 @@
         <h2>Progress Circle Animation using SVG and <a href="http://snapsvg.io/">Snap.svg</a></h2>
         <div style="position:relative;">
         <!-- Add the edited (only one circle) CodePen HTML code here  -->
-            
-            
+        <svg id="animated" viewbox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" fill="#FDB900"/>
+            <path id="progress" stroke-linecap="round" stroke-width="5" stroke="#fff" fill="none"
+                    d="M50 10
+                    a 40 40 0 0 1 0 80
+                    a 40 40 0 0 1 0 -80">
+            </path>
+            <text id="count" x="50" y="50" text-anchor="middle" dy="7" font-size="20">100%</text>
+        </svg>
         </div>
         <address><a href="https://codepen.io/web-tiki/pen/qEGvMN">example</a> by web-tiki</address>
     </section>
@@ -32,7 +43,8 @@
         <h2>Progress Circle Animation using jQuery Library</h2>
         <div style="position:relative;height:210px;">
         <!-- Add the jsfiddle HTML code here -->
-            
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+        <div id="container"></div>
             
         </div>
         <address> <a href="https://jsfiddle.net/kimmobrunfeldt/72tkyn40/">example</a> by kimmobrunfeldt</address>
